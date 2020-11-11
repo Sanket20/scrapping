@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+ADR;TYPE=WORK:;;Blumenstr. 16-18; Tiefenbronn;;75233;
+EMAIL;TYPE=INTERNET:kontakt--at--heinrich-malerbetrieb.de
+FN:Firma   Heinrich GmbH Maler und Raumdesign 
+N:;;;;
+TEL;TYPE=WORK:072349498250
+TITLE;TYPE=WORK:Bodenleger
+END:VCARD
