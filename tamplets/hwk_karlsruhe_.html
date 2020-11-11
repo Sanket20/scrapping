@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: rgba(250, 74, 74, 0.747);">
+    <center>     
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h2 style="background-color: rgb(46, 113, 236); color: white;"><b>hwk karlsruhe</b></h2>
+            <div class="form_div container">
+               <div class="form-group">
+                <label for="term">Term</label>
+                <input class="pos_left form-control select_box"  type="text" name="term" id="term" placeholder="Enter Search Term"><br><br>    
+               </div><br>
+               
+               <div class="form-group">
+                <label for="zipcode">ZipCode</label>
+                <input class="pos_left form-control select_box" type="text" name="zipcode" id="zipcode" placeholder="Enter ZipCode" required><br><br>    
+               </div><br>
+
+               
+                <label for="radius">Radius&nbsp;</label><label id="Range_slider">250</label>
+                <input class="pos_left select_box" type="range" min="20" max="250" value="250" id="Radius" name="radius"><br>    
+               <br><br>
+
+               <div class="form-group">
+                <label for="Job">Job</label>
+                <select class="pos_left form-control select_box" name="Job" id="job">
+                    <option value="" selected>--</option>
+                    <option value="24370">&Auml;nderungsschneider</option>
+                    <option value="26440">Appreteur, Dekateur</option>
+                    <option value="21040">Asphaltierer</option>
+                    <option value="16330">Augenoptiker</option>
+                    <option value="24390">Ausf&uuml;hrung einfacher Schuhreparaturen</option>
+                    <option value="15300">B&auml;cker</option>
+                    <option value="21020">Bautentrocknungsgewerbe</option>
+                    <option value="12450">Beh&auml;lter- und Apparatebauer</option>
+                    <option value="57550">Bestatter/in</option>
+                    <option value="21080">Betonbohrer und -schneider</option>
+                    <option value="11430">Betonstein- und Terrazzohersteller</option>
+                    <option value="21030">Bodenleger</option>
+                    <option value="57480">Bogenmacher</option>
+                    <option value="13280">Boots- und Schiffbauer</option>
+                    <option value="55290">Brauer und M&auml;lzer</option>
+                    <option value="11070">Brunnenbauer</option>
+                    <option value="57390">Buchbinder</option>
+                    <option value="12220">B&uuml;chsenmacher</option>
+                    <option value="24260">B&uuml;gelanstalten f&uuml;r Herrenoberbekleidung</option>
+                    <option value="23250">B&uuml;rsten- und Pinselmacher</option>
+                    <option value="11040">Dachdecker</option>
+                    <option value="24270">Dekorationsn&auml;her</option>
+                    <option value="13480">Drechsler (Elfenbeinschnitzer) und Holzspielzeugmacher</option>
+                    <option value="57400">Drucker</option>
+                    <option value="57370">Edelsteinschleifer und -graveur</option>
+                    <option value="23240">Einbau von genormten Baufertigteilen (z.B. Fenster, T&uuml;ren, Zargen, Regale)</option>
+                    <option value="21010">Eisenflechter</option>
+                    <option value="12260">Elektromaschinenbauer</option>
+                    <option value="12250">Elektrotechniker</option>
+                    <option value="11440">Estrichleger</option>
+                    <option value="22140">Fahrzeugverwerter</option>
+                    <option value="57350">Feinoptiker</option>
+                    <option value="12160">Feinwerkmechaniker</option>
+                    <option value="15320">Fleischer</option>
+                    <option value="25430">Fleischzerleger, Ausbeiner</option>
+                    <option value="57420">Flexograf</option>
+                    <option value="11420">Fliesen-, Platten- und Mosaikleger</option>
+                    <option value="57380">Fotograf</option>
+                    <option value="16380">Friseur</option>
+                    <option value="21050">Fuger (im Hochbau)</option>
+                    <option value="52080">Galvaniseur</option>
+                    <option value="56330">Geb&auml;udereiniger</option>
+                    <option value="57470">Geigenbauer</option>
+                    <option value="11110">Ger&uuml;stbauer</option>
+                    <option value="26470">Getr&auml;nkeleitungsreiniger</option>
+                    <option value="17400">Glasbl&auml;ser und Glasapparatebauer</option>
+                    <option value="17390">Glaser</option>
+                    <option value="17500">Glasveredler</option>
+                    <option value="52110">Gold- und Silberschmied</option>
+                    <option value="52060">Graveur</option>
+                    <option value="24380">Handschuhmacher</option>
+                    <option value="57460">Handzuginstrumentenmacher</option>
+                    <option value="22100">Herstellung von Drahtgestellen f&uuml;r Dekorationszwecke in Sonderanfertigung</option>
+                    <option value="53160">Holzbildhauer</option>
+                    <option value="57500">Holzblasinstrumentenmacher</option>
+                    <option value="23180">Holzblockmacher</option>
+                    <option value="23200">Holz-Leitermacher</option>
+                    <option value="23230">Holzschindelmacher</option>
+                    <option value="51540">Holz- und Bautensch&uuml;tzer/in (Mauerschutz und Holzimpr&auml;gnierung in Geb&auml;uden)</option>
+                    <option value="16340">H&ouml;rakustiker</option>
+                    <option value="12190">Informationstechniker</option>
+                    <option value="25410">Innerei-Fleischer (Kuttler)</option>
+                    <option value="12240">Installateur und Heizungsbauer</option>
+                    <option value="22160">Kabelverleger im Hochbau</option>
+                    <option value="12180">K&auml;lteanlagenbauer</option>
+                    <option value="11120C">Kaminkehrer</option>
+                    <option value="12150">Karosserie- und Fahrzeugbauer</option>
+                    <option value="57430">Keramiker</option>
+                    <option value="27520">Klavierstimmer</option>
+                    <option value="57450">Klavier- und Cembalobauer</option>
+                    <option value="12230">Klempner</option>
+                    <option value="15310">Konditor</option>
+                    <option value="53180">Korb- und Flechtwerkgestalter</option>
+                    <option value="26480">Kosmetiker</option>
+                    <option value="12200">Kraftfahrzeugtechniker</option>
+                    <option value="54240">K&uuml;rschner</option>
+                    <option value="27510">Lampenschirmhersteller</option>
+                    <option value="12210">Landmaschinenmechaniker</option>
+                    <option value="11100">Maler und Lackierer</option>
+                    <option value="26490">Maskenbildner</option>
+                    <option value="54190">Ma&szlig;schneider</option>
+                    <option value="11010">Maurer und Betonbauer</option>
+                    <option value="17410">Mechaniker f&uuml;r Reifen- und Vulkanisationstechnik</option>
+                    <option value="12130">Metallbauer</option>
+                    <option value="52070">Metallbildner</option>
+                    <option value="57490">Metallblasinstrumentenmacher</option>
+                    <option value="22120">Metalls&auml;gen-Sch&auml;rfer</option>
+                    <option value="22110">Metallschleifer und Metallpolierer</option>
+                    <option value="52090">Metall- und Glockengie&szlig;er</option>
+                    <option value="15320C">Metzger</option>
+                    <option value="53140">Modellbauer</option>
+                    <option value="54210">Modist</option>
+                    <option value="55280">M&uuml;ller</option>
+                    <option value="11020">Ofen- und Luftheizungsbauer</option>
+                    <option value="17530">Orgel- und Harmoniumbauer</option>
+                    <option value="16360">Orthop&auml;dieschuhmacher</option>
+                    <option value="16350">Orthop&auml;dietechniker</option>
+                    <option value="13460">Parkettleger</option>
+                    <option value="21070">Rammgewerbe</option>
+                    <option value="14520">Raumausstatter</option>
+                    <option value="27540">Requisiteur</option>
+                    <option value="22150">Rohr- und Kanalreiniger</option>
+                    <option value="13470">Rollladen- und Sonnenschutztechniker</option>
+                    <option value="54260">Sattler und Feint&auml;schner</option>
+                    <option value="17510">Schilder- und Lichtreklamehersteller</option>
+                    <option value="27550">Schirmmacher</option>
+                    <option value="27570">Schlagzeugmacher</option>
+                    <option value="52100">Schneidwerkzeugmechaniker</option>
+                    <option value="26450">Schnellreiniger</option>
+                    <option value="11120">Schornsteinfeger</option>
+                    <option value="13270C">Schreiner</option>
+                    <option value="54250">Schuhmacher</option>
+                    <option value="54230">Segelmacher</option>
+                    <option value="14290">Seiler</option>
+                    <option value="57410">Siebdrucker</option>
+                    <option value="25420">Speiseeishersteller</option>
+                    <option value="12230C">Spengler</option>
+                    <option value="11080">Steinmetz und Steinbildhauer</option>
+                    <option value="11050">Stra&szlig;enbauer</option>
+                    <option value="11090">Stuckateur</option>
+                    <option value="22130">Tankschutzbetriebe</option>
+                    <option value="26460">Teppichreiniger</option>
+                    <option value="54540">Textilgestalter</option>
+                    <option value="24350">Textil-Handdrucker</option>
+                    <option value="56310">Textilreiniger</option>
+                    <option value="24300">Theaterkost&uuml;mn&auml;her</option>
+                    <option value="21090">Theater- und Ausstattungsmaler</option>
+                    <option value="13270">Tischler</option>
+                    <option value="52050">Uhrmacher</option>
+                    <option value="57520">Vergolder</option>
+                    <option value="11060">W&auml;rme-, K&auml;lte- und Schallschutzisolierer</option>
+                    <option value="55300">Weink&uuml;fer</option>
+                    <option value="16370">Zahntechniker</option>
+                    <option value="11030">Zimmerer</option>
+                    <option value="57510">Zupfinstrumentenmacher</option>
+                    <option value="12170">Zweiradmechaniker</option>
+                </select><br><br>
+               </div><br>
+           
+            <div class="form-group">
+                <label  for="training">training</label>
+                <select class="pos_left form-control select_box" name="training">
+                    <option value="">Training</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select><br><br>
+            </div><br>
+
+            <input type="submit" style="background-color: rgb(57, 120, 255); color: white; border: none; padding: 5px; border-radius: 5px; " class="form-control" value="Submit">
+        </div><br>
+        <!-- <p name="job_title" id="job_title">  </p>-->
+        </form> 
+   
+    </center>
+</body>
+<style>
+.form_div{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.pos_left{
+  float: left;
+}
+/* .select_box{
+    width: 190px;
+    border: none;
+    border-bottom: 1px solid black;
+} */
+label{
+    float: left;   
+}
+</style>
+
+<script>
+    var slider = document.getElementById("Radius");
+    var output = document.getElementById("Range_slider");
+
+    // var e = document.getElementById("job");
+    // var job_title = document.getElementById("job_title");
+    // var strUser = e.options[e.selectedIndex].text;
+    // job_title.innerHTML = strUser;
+    // output.innerHTML = slider.value;
+    
+    slider.oninput = function() {  
+      output.innerHTML = this.value;
+    }
+
+//     e.onchange = function() {
+//     job_title.innerHTML = this.strUser;
+//   }
+</script>
+
+</html>
